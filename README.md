@@ -165,8 +165,83 @@ public class activity_second extends AppCompatActivity {
 
 </RelativeLayout>
 ```
+## Second-activity.xml:
+```
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingTop="@dimen/activity_vertical_margin"
+android:paddingBottom="@dimen/activity_vertical_margin"
+android:background="#CCEEAA"
+tools:context="com.example.android.intents.SecondActivity">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:text="This is Second Activity"
+    android:id="@+id/textView"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true" />
+</RelativeLayout>
 
+```
+## Dimens.xml:
+```
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_vertical_margin">8dp</dimen>
+    <dimen name="activity_horizontal_margin">8dp</dimen>
+</resources>
+```
+## Androidmanifest.xml:
+```
+
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Ex03"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity_second" >
+
+        </activity>
+
+
+    </application>
+
+</manifest>
+
+```
 ## Output:
+
+### HOME PAGE:
+![236871493-ec2fe942-cd9d-460c-acd3-36674b4bd3f3](https://github.com/Haridharshini21500176/Ex-No_3_Intent/assets/94168395/1fbc6db4-8807-4e5b-8861-6845af29aac8)
+
+
+### IMPLICIT INTENT:
+
+![236871585-4dfff279-914a-4aa3-bbfe-3fb215fde924](https://github.com/Haridharshini21500176/Ex-No_3_Intent/assets/94168395/ae6a526f-877b-4ab2-9882-adb3aa025e2f)
+
+### EXPLICIT INTENT:
+![image](https://github.com/Haridharshini21500176/Ex-No_3_Intent/assets/94168395/262cdd7c-10da-4696-bf00-90a1fb8ea04a)
 
 
 
